@@ -7,6 +7,7 @@
 int main(void)
 {
 	int c=1;
-	putchar(c);
+	char b="and that piece of art is useful\" - Dora Korpar, 2015-10-19";
+	putc(c,b);
 	return (0);
 }
