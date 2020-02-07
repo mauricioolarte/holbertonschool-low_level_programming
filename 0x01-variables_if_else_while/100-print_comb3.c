@@ -1,5 +1,6 @@
 #include <stdlib.h>
 #include <stdio.h>
+/* more headers goes there */
 /**
  * main - Entry point
  *
@@ -18,7 +19,7 @@ int main(void)
 	{
 	putchar (b);
 	putchar (c);
-	if (b !='8' || c != '9')
+	if (b != '8' || c != '9')
 	{
 	putchar (',');
 	putchar (' ');
