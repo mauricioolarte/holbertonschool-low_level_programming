@@ -14,15 +14,12 @@ int main(void)
 	{
 	for (c = '0'; c <= '9'; c++)
 	{
-	if (b < c || b != c)
+	if (b < c && b != c)
 	{
 	putchar (b);
 	putchar (c);
-	if (b != '9' || c != '9')
-	{
 	putchar (',');
 	putchar (' ');
-	}
 	}
 	}
 	}
