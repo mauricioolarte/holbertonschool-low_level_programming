@@ -26,7 +26,7 @@ int main(void)
 			putchar (b);
 			putchar (c);
 			putchar (' ');
-			lputchar (d);
+			putchar (d);
 			putchar (e);
 			if (b == '9' && c == '8' &&  d == '9' && e == '9')
 			{
@@ -34,6 +34,11 @@ int main(void)
 			}
 			putchar (',');
 			putchar (' ');
-			 ('\n');
+			}
+			}
+			}
+		}
+	}
+	putchar ('\n');
 	return (0);
 }
