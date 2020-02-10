@@ -21,7 +21,7 @@ int main(void)
 		{
 		for (e = 0; e <= 9; e++)
 		{
-			if ((d > b) || ((e > c) && (b <= d)))
+			if ((e > c) && (d >= b))
 		{
 		putchar (b + '0');
 		putchar (c + '0');
