@@ -13,22 +13,22 @@ int main(void)
 	int d;
 	int e;
 
-	for (b = '0'; b <= '9'; b++)
+	for (b = 0; b <= 9; b++)
 	{
-		for (c = '0'; c <= '9'; c++)
+		for (c = 0; c <= 9; c++)
 		{
-		for (d = '0'; d <= '9'; d++)
+		for (d = 0; d <= 9; d++)
 		{
-		for (e = '0'; e <= '9'; e++)
+		for (e = 0; e <= 9; e++)
 		{
 			if ((d > b) || ((e > c) && (b <= d)))
 		{
-		putchar (b);
-		putchar (c);
+		putchar (b + '0');
+		putchar (c + '0');
 		putchar (' ');
-		putchar (d);
-		putchar (e);
-		if (b == '9' && c == '8' &&  d == '9' && e == '9')
+		putchar (d + '0');
+		putchar (e + '0');
+		if (b == 9 && c == 8 &&  d == 9 && e == 9)
 		{
 		break;
 		}
