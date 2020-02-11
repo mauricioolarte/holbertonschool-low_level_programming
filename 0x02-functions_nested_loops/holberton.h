@@ -1,5 +1,5 @@
-#ifndef holberton.h
-#define holberton.h
+#ifndef _HOLBERTON_H_
+#define _HOLBERTON_H_
 
 int _putchar(char c);
 
@@ -23,4 +23,4 @@ int add(int n1, int n2);
 
 void print_to_98(int n);
 
-#endif /* holberton */
+#endif /* _HOLBERTON_H_ */
