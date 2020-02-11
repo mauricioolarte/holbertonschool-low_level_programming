@@ -1,5 +1,4 @@
-#include "_putchar.h"
-
+#include "holberton.h"
 /**
  * main - check the code for Holberton School students.
  *
@@ -7,18 +6,13 @@
  */
 int main(void)
 {
-	char c;
+	char d[] = {'H', 'o', 'l', 'b', 'e', 'r', 't', 'o', 'n'};
+	int i;
 
-	_putchar(72);
-	_putchar(111);
-	_putchar(108);
-	_putchar(98);
-	_putchar(101);
-	_putchar(114);
-	_putchar(116);
-	_putchar(111);
-	_putchar(110);
-	
+	for (i = 0; i <= 8; i++)
+	{
+		_putchar(d[i]);
+	}
 	_putchar('\n');
-	return(0);
+	return (0);
 }
