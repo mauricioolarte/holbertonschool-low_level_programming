@@ -1,10 +1,9 @@
 #include <stdio.h>
 /**
- *Sum_m - make the sum of multiples of 3 or 5 bellow 1024.
+ *main - make the sum of multiples of 3 or 5 bellow 1024.
  *
- *@n: is a integer.
  *
- *Return: 0;
+ *Return: sum;
  *
  */
 
@@ -20,5 +19,5 @@ int main(void)
 		}
 	}
 		printf("%d\n", sum1);
-		return(sum1);
+		return (sum1);
 }
