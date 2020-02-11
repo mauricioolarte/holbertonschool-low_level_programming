@@ -1,4 +1,4 @@
-#include "_putchar.h"
+#include "holberton.h"
 /**
  * _islower - check if a character is a lowercase.
  * @c: parameter is a int that representa a lowercase.
