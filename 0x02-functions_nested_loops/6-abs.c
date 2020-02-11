@@ -1,5 +1,4 @@
 #include "holberton.h"
-#include <stdio.h>
 /**
  *_abs - this function calculate the absolute valor of a number.
  *
@@ -12,15 +11,15 @@ int _abs(int n)
 {
 	if (n > 0)
 	{
-		printf("%d\n", n);
+		return (n);
 	}
 	else if (n == 0)
 	{
-		printf("%d\n", n);
+		return (0);
 	}
 	else
 	{
 		n = n * (-1);
-		printf("%d\n", n);
+		return (n);
 	}
 }
