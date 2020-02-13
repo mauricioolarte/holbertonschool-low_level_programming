@@ -16,8 +16,7 @@ void print_number(int n)
 	}
 
 	larg = n;
-	if (n > 10 && n <=0)
-	{
+
 	while (larg / 10 > 0)
 	{
 		larg = larg / 10;
@@ -26,19 +25,18 @@ void print_number(int n)
 
 	for (i = k; i > 0; i--)
 	{
+		if (k != 1)
+		{
 		for (j = 2; j <= i; j++)
 		{
 			p = p * 10;
+		}
 		}
 
 		d = n / p;
 		_putchar(d + '0');
 		n = n - p * d;
 		p = 1;
-	}
-	}
-	else
-	{
-		_putchar(n + '0');
+
 	}
 }
