@@ -16,7 +16,8 @@ void print_number(int n)
 	}
 
 	larg = n;
-
+	if (n > 10)
+	{
 	while (larg / 10 > 0)
 	{
 		larg = larg / 10;
@@ -34,5 +35,10 @@ void print_number(int n)
 		_putchar(d + '0');
 		n = n - p * d;
 		p = 1;
+	}
+	}
+	else
+	{
+		_putchar(n + '0');
 	}
 }
