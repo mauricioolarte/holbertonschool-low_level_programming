@@ -35,5 +35,4 @@ void print_number(int n)
 		n = n - p * d;
 		p = 1;
 	}
-	_putchar('\n');
 }
