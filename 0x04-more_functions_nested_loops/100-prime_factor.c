@@ -9,7 +9,7 @@ int main(void)
 {
 	long i, j, k = 0, n, pm;
 
-	n = 4019;
+	n = 612852475143;
 
 	for (i = 2; i < n; i++)
 	{
