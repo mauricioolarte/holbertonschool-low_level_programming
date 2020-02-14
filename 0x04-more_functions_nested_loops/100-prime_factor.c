@@ -30,6 +30,6 @@ int main(void)
 				n = n / pm;
 		}
 	}
-	printf("%ld\n", pm);
+	printf("%ld\n", n);
 	return (0);
 }
