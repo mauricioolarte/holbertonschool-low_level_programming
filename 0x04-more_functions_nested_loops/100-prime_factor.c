@@ -2,12 +2,13 @@
 /**
  *main - is a function that calculate the max prime number of a number.
  *
- *@n: integer
  *
+ *Return: valor 0.
  */
 int main(void)
 {
 	long i, j, k = 0, n, pm;
+
 	n = 612852475143;
 
 	for (i = 2; i < n; i++)
