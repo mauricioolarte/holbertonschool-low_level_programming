@@ -10,7 +10,7 @@ int main(void)
 
 	printf("%li, %li, ", n1, n2);
 
-	for (i = 0; i < 50; i++)
+	for (i = 0; i < 48; i++)
 	{
 		sum = n1 + n2;
 		if (i != 47)
