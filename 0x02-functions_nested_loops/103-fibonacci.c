@@ -6,15 +6,18 @@
  */
 int main(void)
 {
-	long n1 = 1, n2 = 2, sum = 0, st = 0;
+	int n1 = 1, n2 = 2, sum = 0, st = 2;
 
 	while (sum <= 4000000)
 	{
 		sum = n1 + n2;
-		st = st + sum;
+		if (sum % 2 == 0)
+		{
+			st = st + sum;
+		}
 		n1 = n2;
 		n2 = sum;
 	}
-	printf("%ld\n", st);
+	printf("%d\n", st);
 	return (0);
 }
