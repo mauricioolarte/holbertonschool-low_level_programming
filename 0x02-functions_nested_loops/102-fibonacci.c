@@ -8,18 +8,18 @@ int main(void)
 {
 	long n1 = 1, n2 = 2, sum = 0, i;
 
-	printf("%ld, %ld, ", n1, n2);
+	printf("%li, %li, ", n1, n2);
 
 	for (i = 0; i < 50; i++)
 	{
 		sum = n1 + n2;
-		if (i != 49)
+		if (i != 47)
 		{
-			printf("%ld, ", sum);
+			printf("%li, ", sum);
 		}
 		else
 		{
-			printf("%ld", sum);
+			printf("%li", sum);
 		}
 		n1 = n2;
 		n2 = sum;
