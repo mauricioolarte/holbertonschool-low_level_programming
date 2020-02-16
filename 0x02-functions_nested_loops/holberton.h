@@ -23,5 +23,6 @@ int add(int n1, int n2);
 
 void print_to_98(int n);
 void times_table(void);
+void print_times_table(int n);
 
 #endif /* _HOLBERTON_H_ */
