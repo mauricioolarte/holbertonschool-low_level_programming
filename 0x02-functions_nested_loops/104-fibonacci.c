@@ -6,13 +6,13 @@
  */
 int main(void)
 {
-	float n1 = 1, n2 = 2, sum = 0, i;
+	long double n1 = 1, n2 = 2, sum = 0, i;
 
-	printf("%.f, %.f", n1, n2);
-	for (i = 0; i <= 97; i++)
+	printf("%.Lf, %.Lf", n1, n2);
+	for (i = 0; i <= 95; i++)
 	{
 		sum = n1 + n2;
-		printf(", %.f", sum);
+		printf(", %.Lf", sum);
 		n1 = n2;
 		n2 = sum;
 	}
