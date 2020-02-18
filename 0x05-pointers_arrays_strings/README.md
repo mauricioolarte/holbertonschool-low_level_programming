@@ -1,0 +1,1 @@
+this file is for exercises of pointer, array and strings.
