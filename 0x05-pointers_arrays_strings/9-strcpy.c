@@ -1,9 +1,9 @@
 #include "holberton.h"
 /**
- **_strcpy - retur the large of a string.
+**_strcpy - retur the large of a string.
 *@dest: is a direction of a sting.
 *@src: is a direc.
-*
+*Return: dest
 */
 char *_strcpy(char *dest, char *src)
 {
