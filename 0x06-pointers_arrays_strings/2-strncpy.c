@@ -1,7 +1,6 @@
 #include "holberton.h"
-#include <stdio.h>
 /**
- **_strncat - is function thar add array to other.
+ **_strncpy - is function thar add array to other.
  *@dest: array destiny
  *@src: arra origin.
  *@n: integer.
@@ -10,11 +9,7 @@
 char *_strncpy(char *dest, char *src, int n)
 {
 	int b, i;
-/**
-*	for (a = 0; dest[a] != '\0'; a++)
-*	{
-*	}
-*/
+
 	for (b = 0; src[b] != '\0'; b++)
 	{
 	}
