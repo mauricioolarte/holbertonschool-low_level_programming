@@ -1,0 +1,1 @@
+this repository is abuot pointer, array and string.
