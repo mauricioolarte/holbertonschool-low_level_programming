@@ -7,16 +7,18 @@
 char *rot13(char *s)
 {
 	int a, b, n = 53; /* n son 52 letras alfabeto + 1*/
-	char cod[] = {65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 'a', 98, 99, 100, 101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122};
-     char cod_eq[] = {78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 'n', 111, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122, 97, 98, 99, 100, 101, 102, 103, 104,
-		       105, 106, 107, 108, 109};
+	char cod[] = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
+	char cod_eq[] = "nopqrstuvwxyzabcdefghijklmNOPQRSTUVWXYZABCDEFGHIJKLM";
 
 	for (a = 0; s[a] != '\0'; a++)
 	{
 		for (b = 0; b < n; b++)
 		{
 		if (s[a] == cod[b])
-					s[a] = cod_eq[b];
+		{
+			s[a] = cod_eq[b];
+			break;
+		}
 		}
 	}
 		return (s);
