@@ -1,4 +1,4 @@
-#include "holberton.h"
+BB#include "holberton.h"
 /**
  *print_number - print a number whit _putchar.
  *
@@ -7,36 +7,30 @@
  */
 void print_number(int n)
 {
-	int i, d, k = 1, p = 1, j, larg;
+	int m, p = 0, k, j;
 
+	j = n % 10;
+	n /= 10;
 	if (n < 0)
 	{
-		n = -n;
 		_putchar('-');
+		n = -n;
 	}
-
-	larg = n;
-
-	while (larg / 10 > 0)
+	m = n;
+	while (m != 0)
 	{
-		larg = larg / 10;
-		k++;
-	}
-
-	for (i = k; i > 0; i--)
-	{
-		if (k != 1)
+		k = 1;
+		while (m / 10)
 		{
-			for (j = 2; j <= i; j++)
-			{
-				p = p * 10;
-			}
+			k *= 10;
+			m = m / 10;
 		}
-
-		d = n / p;
-		_putchar(d + '0');
-		n = n - p * d;
-		p = 1;
-
+		_putchar (m);
+		m = n;
+		m %= k;
 	}
+	if (n == 0)
+		_putchar('0');
+	else
+		_putchar(j + '0');
 }
