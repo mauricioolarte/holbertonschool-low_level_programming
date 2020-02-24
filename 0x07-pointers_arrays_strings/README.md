@@ -1,0 +1,1 @@
+this file ifo for pointr function exersices.
