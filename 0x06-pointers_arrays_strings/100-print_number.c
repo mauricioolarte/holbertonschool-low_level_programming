@@ -7,7 +7,7 @@ BB#include "holberton.h"
  */
 void print_number(int n)
 {
-	int m, p = 0, k;
+	int m, p = 0, k, j = -2147483648;
 
 	if (n == -2147483648)
 	{
