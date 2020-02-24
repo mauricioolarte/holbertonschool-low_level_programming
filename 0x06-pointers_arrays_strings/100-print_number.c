@@ -1,4 +1,4 @@
-#include "holberton.h"
+BB#include "holberton.h"
 /**
  *print_number - print a number whit _putchar.
  *
@@ -20,7 +20,7 @@ void print_number(int n)
 		n = -n;
 	}
 	m = n;
-	while ( != 0)
+	while (m != 0)
 	{
 		k = 1;
 		while (m / 10)
