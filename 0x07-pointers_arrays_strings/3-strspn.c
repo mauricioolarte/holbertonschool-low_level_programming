@@ -15,7 +15,7 @@ unsigned int _strspn(char *s, char *accept)
 		{
 			if (s[i] == accept[j])
 			{
-				coin ++;
+				coin++;
 				k++;
 			}
 			j++;
@@ -26,5 +26,5 @@ unsigned int _strspn(char *s, char *accept)
 		j = 0;
 		k = 0;
 	}
-	return(coin);
+	return (coin);
 }
