@@ -7,13 +7,10 @@ BB#include "holberton.h"
  */
 void print_number(int n)
 {
-	int m, p = 0, k, j = -2147483648;
+	int m, p = 0, k, j;
 
-	if (n == -2147483648)
-	{
-		m /= 10;
-		p = 1;
-	}
+	j = n % 10;
+	n /= 10;
 	if (n < 0)
 	{
 		_putchar('-');
@@ -32,8 +29,8 @@ void print_number(int n)
 		m = n;
 		m %= k;
 	}
-	if (p == 1)
-		_putchar('8');
 	if (n == 0)
 		_putchar('0');
+	else
+		_putchar(j + '0');
 }
