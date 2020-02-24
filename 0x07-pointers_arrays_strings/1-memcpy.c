@@ -1,9 +1,10 @@
 #include "holberton.h"
 /**
-**_memset - this fill a n bytes whit value b.
-*@s: chart.
-*@n: b is integer.
-*@b: is a integer.
+**_memcpy - this fill a n bytes whit value b.
+*@dest: chart.
+*@src: b is integer.
+*@n: is a integer.
+*Return: string.
 */
 char *_memcpy(char *dest, char *src, unsigned int n)
 {
