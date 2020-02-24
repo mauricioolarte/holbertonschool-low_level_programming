@@ -3,7 +3,7 @@
 **_strchr - retur a string after value c.
 *@s: string.
 *@c: is a integer.
-*Retutn: Null o s.
+*Return: Null o s.
 */
 char *_strchr(char *s, char c)
 {
