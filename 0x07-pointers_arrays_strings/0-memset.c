@@ -4,6 +4,7 @@
 *@s: chart.
 *@n: b is integer.
 *@b: is a integer.
+*Return: string.
 */
 char *_memset(char *s, char b, unsigned int n)
 {
