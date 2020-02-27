@@ -9,7 +9,7 @@ int pot(int a, int b)
 {
 	if (b < a)
 	{
-	if ( (b * b) != a)
+	if ((b * b) != a)
 		return (pot(a, b + 1));
 	else
 		return (b);
