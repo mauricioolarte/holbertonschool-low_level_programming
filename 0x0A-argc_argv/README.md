@@ -1,0 +1,1 @@
+his file is practice abput argc and argv.
