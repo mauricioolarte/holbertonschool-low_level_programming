@@ -8,27 +8,27 @@
 */
 int main(int argc, char *argv[])
 {
-	int mon = 0, i = 0, change = atoi(argv[1]);
+	int mon = 0, i = 0, cents = atoi(argv[1]);
 	int coin[] = {25, 10, 5, 2, 1};
 
 	if (argc == 2)
 	{
-		if (change > 0)
+		if (cents > 0)
+		{
+			while (i < 5)
 			{
-				while (i < 5)
+				if ((cents / coin[i]) == 0)
 				{
-					if ((change / coin[i]) == 0)
-					{
-						i++;
-					}
-					else
-					{
-					mon += change / coin[i];
-					change = change % coin[i];
 					i++;
-					}
 				}
-				printf("%d\n", mon);
+				else
+				{
+					mon += cents / coin[i];
+					change = cents % coin[i];
+					i++;
+				}
+			}
+			printf("%d\n", mon);
 			}
 			else
 			{
