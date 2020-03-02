@@ -24,7 +24,7 @@ int main(int argc, char *argv[])
 				else
 				{
 					mon += cents / coin[i];
-					change = cents % coin[i];
+					cents = cents % coin[i];
 					i++;
 				}
 			}
