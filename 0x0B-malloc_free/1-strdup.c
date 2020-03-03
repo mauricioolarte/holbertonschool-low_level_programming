@@ -1,6 +1,7 @@
 #include <stdlib.h>
 /**
-*_strup - is a string.
+*_strdup - is a string.
+*@str: is a string.
 *Return: string.
 */
 char *_strdup(char *str)
@@ -9,7 +10,7 @@ char *_strdup(char *str)
 	unsigned int i = 0, j = 0;
 
 	if (str == '\0')
-		return('\0');
+		return ('\0');
 	while (*(str + i) != '\n')
 		i++;
 	ar = malloc(i * sizeof(char));
