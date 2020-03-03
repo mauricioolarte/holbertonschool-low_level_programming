@@ -11,10 +11,12 @@ char *str_concat(char *s1, char *s2)
 	char *ar;
 	unsigned int i = 0, j = 0, k = 0, h = 0;
 
-/*	if (s1 == '\0')
-	return ('\0');*/
+	if (*s1 == '\0')
+		*(s1 + 1) = '\0';
+	if (*s2 == '\0')
+		*(s2 + 1) = '\0';
 	while (*(s1 + k) != '\0')
-                k++;
+		k++;
 	while (*(s2 + i) != '\0')
 		i++;
 	h = k + i;
