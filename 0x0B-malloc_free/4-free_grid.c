@@ -2,7 +2,7 @@
 /**
 *free_grid - string.
 *@grid: string.
-*@heigt: integer
+*@height: integer
 */
 void free_grid(int **grid, int height)
 {
