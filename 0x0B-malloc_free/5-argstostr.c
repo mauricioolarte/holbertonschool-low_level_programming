@@ -5,25 +5,30 @@
 *@av: this arrow.
 *Return: pointer.
 */
-int char *argstostr(int ac, char **av)
+char *argstostr(int ac, char **av)
 {
-	int i = 0, j = 0, k = 0;
-	char **ar;
+	int i, j, k = 0, m;
+	char *arra;
 
-	if (ac < 0)
-		return ('\0');
-
-	ar = malloc((ac) * sizeof(int *));
-	for (k = 0; k < ac; k++)
+	for (i = 0; i < ac; i++)
 	{
-		ar[k] = malloc(*av * sizeof(int));
+		for (j = 0; av[i][j] != '\0'; j++)
+			k++;
 	}
-	for (i = 0; i < av; i++)
+	arra = malloc((k + ac +1) * sizeof(char));
+	if (arra == NULL)
+		return (NULL);
+	m = 0;
+	for (i = 0; i < ac; i++)
 	{
-		for (j = 0; j < ac; j++)
+		for (j = 0; av[i][j] != '\0'; j++)
 		{
-			ar[i][j] = 0;
+			arra[m] = av[i][j];
+			m++;
 		}
+		arra[m] = '\n';
+		m++;
 	}
-	return (ar);
+	arra[m] = '\0';
+	return (arra);
 }
