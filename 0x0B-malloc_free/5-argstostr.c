@@ -1,8 +1,8 @@
 #include <stdlib.h>
 /**
-***alloc_grid - this function return a pointer.
-*@width: this columns.
-*@height: this arrow.
+**argstostr - this function return a pointer.
+*@ac: this columns.
+*@av: this arrow.
 *Return: pointer.
 */
 int char *argstostr(int ac, char **av)
