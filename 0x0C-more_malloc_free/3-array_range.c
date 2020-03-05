@@ -1,8 +1,8 @@
 #include <stdlib.h>
 /**
- **_calloc - this function create a array.
-*@size: size of array.
-*@nmemb: is a character.
+**array_range - this function create a array.
+*@min: size of array.
+*@max: is a character.
 *Return: string.
 */
 int *array_range(int min, int max)
