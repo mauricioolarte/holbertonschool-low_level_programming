@@ -20,7 +20,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 		k++;
 	while (*(s2 + i) != '\0')
 		i++;
-	if (n => i)
+	if (n >= i)
 		n = i;
 	h = k + n;
 	i = 0;
