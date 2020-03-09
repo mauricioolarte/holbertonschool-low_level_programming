@@ -11,7 +11,7 @@ struct dog
 	char *name;
 	float age;
 	char *owner;
-}
+};
 
 int _putchar(char c);
 #endif /*_1_DOGY_H_*/
