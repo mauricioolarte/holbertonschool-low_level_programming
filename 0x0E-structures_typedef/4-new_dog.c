@@ -1,13 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include "dog.h"
-/**struct dog_t
- *{
- *	char *name;
- *	float age;
- *	char *owner;
- *};
- */
 /**
  **new_dog - new structure.
  *@name: name of dog.
@@ -18,8 +11,8 @@
 dog_t *new_dog(char *name, float age, char *owner)
 {
 	int i = 0, j = 0, k, n;
-
 	dog_t *dogy;
+
 	while (name[i] != '\0')
 		i++;
 	while (owner[j] != '\0')
