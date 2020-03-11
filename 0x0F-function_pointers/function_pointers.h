@@ -1,5 +1,5 @@
-#ifndef _HOLBERTON_H_
-#define _HOLBERON_H_
+#ifndef FUNCTION_POINTERS_H_
+#define FUNCTION_POINTERS_H_
 
 int _putchar(char c);
 char *create_array(unsigned int size, char c);
