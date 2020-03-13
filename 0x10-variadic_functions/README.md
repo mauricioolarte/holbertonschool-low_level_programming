@@ -1,0 +1,1 @@
+his file is for practice of variable fnctions.
