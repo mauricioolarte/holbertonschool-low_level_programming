@@ -1,6 +1,5 @@
 #include <stdio.h>
 #include <stdarg.h>
-#include <ctype.h>
 #include <stdlib.h>
 /**
  *print_numbers - this function print all tjhe arguments.
@@ -14,8 +13,6 @@ void print_numbers(const char *separator, const unsigned int n, ...)
 	unsigned int i;
 
 	if (separator == NULL)
-		return;
-	if (isdigit(separator[0]))
 		return;
 	if (n <= 0)
 		return;
