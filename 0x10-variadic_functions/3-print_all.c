@@ -10,9 +10,11 @@
 void str(char *s)
 {
 	if (s == NULL)
+	{
 		printf("(nil)");
-	else
-		printf("%s", s);
+		return;
+	}
+	printf("%s", s);
 }
 
 /**
