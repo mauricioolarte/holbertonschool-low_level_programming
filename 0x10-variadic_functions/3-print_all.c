@@ -3,10 +3,10 @@
 #include "variadic_functions.h"
 #include <stdlib.h>
 
-void _int(void *);
-void _string(void *);
-void _float(void *);
-void _char(void *);
+void _string();
+void _char();
+void _float();
+void _int();
 
 /**
  *print_all - this function print everithing.
@@ -21,7 +21,7 @@ void print_all(const char * const format, ...)
 	imp selec[] = {
 		{"c", _char},
 		{"s", _string},
-		{"i", _int },
+		{"i", _int},
 		{"f", _float},
 		{NULL, NULL}
 	};
@@ -46,23 +46,9 @@ void print_all(const char * const format, ...)
 	va_end(selector);
 	printf("\n");
 }
-
-
-
-
-
 /**
- *_char - print a single char
- *@selector: is a pointer.
- */
-void _char(va_list selector)
-{
-	printf("%c", va_arg(selector, int));
-}
-
-/**
- *_string - print a passed string
- *@selector: is a pointer.
+*_string - print a passed string
+*@selector: is a pointer.
  */
 void _string(va_list selector)
 {
@@ -86,6 +72,14 @@ void _float(va_list selector)
 	printf("%f", va_arg(selector, double));
 }
 
+/**
+ *_char - print a single char
+ *@selector: is a pointer.
+ */
+void _char(va_list selector)
+{
+	printf("%c", va_arg(selector, int));
+}
 /**
  *_int - print an int
  *@selector: is a pointer.
