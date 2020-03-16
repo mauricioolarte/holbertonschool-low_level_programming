@@ -43,8 +43,6 @@ void print_all(const char * const format, ...)
 	va_start(selector, format);
 	while (format && format[i] != '\0')
 	{
-		if (i > 0)
-			separador = ", ";
 		j = 0;
 		while (selec[j].p != NULL)
 		{
@@ -52,6 +50,7 @@ void print_all(const char * const format, ...)
 			{
 				printf("%s", separador);
 				selec[j].f(selector);
+				separador = ", ";
 			}
 			j++;
 		}
