@@ -10,39 +10,26 @@
 void print_strings(const char *separator, const unsigned int n, ...)
 {
 	va_list argument;
-	va_list validacion;
-	unsigned int i, j;
+	unsigned int i;
 	char *k;
 
-	va_start(validacion, n);
-	for (j = 0; j < n; j++)
-	{
-		if (!(va_arg(validacion, char *)))
-			j++;
-		else
-			return;
-	}
-	va_end(validacion);
 	if (separator == NULL)
 		return;
 	va_start(argument, n);
-	for (i = 0; i < n; i++)
+	k = va_arg(argument, char *);
+	if (k != NULL)
+		printf("%s", k);
+	else
+		printf("(nil)");
+	for (i = 1; i < n; i++)
 	{
 		k = va_arg(argument, char *);
-		if (i < (n - 1))
-		{
-			if (k != NULL)
-				printf("%s%s", k, separator);
-			else
-				printf("(nil)%s", separator);
-		}
+		if (k != NULL)
+			printf("%s%s", separator, k);
 		else
-		{
-			if (k != NULL)
-				printf("%s\n", k);
-			else
-				printf("(nil)\n");
-		}
+			printf("%s(nil)", separator);
+
 	}
-	va_end(argument);
+va_end(argument);
+printf("\n");
 }
