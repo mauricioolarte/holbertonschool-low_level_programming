@@ -9,20 +9,6 @@ void _float();
 void _char();
 
 /**
- *str - is print string
- *@s: is a string.
- */
-void str(char *s)
-{
-	if (s == NULL)
-	{
-		printf("(nil)");
-		return;
-	}
-	printf("%s", s);
-}
-
-/**
  *print_all - this function print everithing.
  *@format: the format of argument.
  */
