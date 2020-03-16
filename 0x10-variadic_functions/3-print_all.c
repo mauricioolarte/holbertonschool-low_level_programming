@@ -3,6 +3,11 @@
 #include "variadic_functions.h"
 #include <stdlib.h>
 
+void _int();
+void _string();
+void _float();
+void _char();
+
 /**
  *str - is print string
  *@s: is a string.
@@ -26,35 +31,27 @@ void print_all(const char * const format, ...)
 {
 	int i = 0, j = 0;
 	char *separador = "";
+	imp selec[] = {
+		{"c", _char},
+		{"s", _string},
+		{"i", _int},
+		{"f", _float},
+		{NULL, NULL}
+	};
 	va_list selector;
 
 	va_start(selector, format);
-	while (format[i] != '\0')
+	while (format && format[i] != '\0')
 	{
-		if (j > 0)
+		if (i > 0)
 			separador = ", ";
-
-		if (format[i] == 'c' || format[i] == 's' ||
-		    format[i] == 'f' || format[i] == 'i')
+		j = 0;
+		while (selec[j].p != NULL)
 		{
-			switch (format[i])
+			if (selec[j].p[0] == format[i])
 			{
-			case 'c':
-				printf("%s%c", separador, va_arg(selector,
-								 int));
-				break;
-			case 's':
 				printf("%s", separador);
-				str(va_arg(selector, char *));
-				break;
-			case 'f':
-				printf("%s%f", separador,  va_arg(selector,
-								double));
-				break;
-			case 'i':
-				printf("%s%d", separador, va_arg(selector,
-							       int));
-				break;
+				selec[j].f(selector);
 			}
 			j++;
 		}
@@ -62,4 +59,48 @@ void print_all(const char * const format, ...)
 	}
 	va_end(selector);
 	printf("\n");
+}
+
+
+
+
+
+/**
+ * print_char - print a single char
+ */
+void _char(va_list selector)
+{
+	printf("%c", va_arg(selector, int));
+}
+
+/**
+ * _string - print a passed string
+ */
+void _string(va_list selector)
+{
+	char *nulo;
+	nulo = va_arg(selector, char *);
+	if (nulo == NULL)
+	{
+		printf("(nil)");
+		return;
+	}
+	printf("%s", nulo);
+}
+
+/**
+ * _float - print a float
+ * @ap: float passed
+ */
+void _float(va_list selector)
+{
+	printf("%f", va_arg(selector, double));
+}
+
+/**
+ * _int - print an int
+ */
+void _int(va_list selector)
+{
+	printf("%d", va_arg(selector, int));
 }

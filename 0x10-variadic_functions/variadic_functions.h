@@ -1,6 +1,18 @@
 #ifndef VARIADIC_FUNCTIONS_H_
 #define VARIADIC_FUNCTIONS_H_
 
+
+/**
+ * struct selector - Struct 
+ *
+ * @p: The operator
+ * @f: The function associated
+ */
+typedef struct selector
+{
+	char *p;
+	void (*f)(void *);
+} imp;
 int _putchar(char c);
 int int_index(int *array, int size, int (*cmp)(int));
 int sum_them_all(const unsigned int n, ...);
