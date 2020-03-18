@@ -13,8 +13,10 @@ void print_strings(const char *separator, const unsigned int n, ...)
 	unsigned int i;
 	char *k;
 
-	if (separator == NULL)
+	if (n == 0)
 		return;
+	if (separator == NULL)
+		separator = "";
 	va_start(argument, n);
 	k = va_arg(argument, char *);
 	if (k != NULL)
