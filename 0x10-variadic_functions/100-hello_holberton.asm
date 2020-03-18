@@ -1,10 +1,36 @@
-  global    main
-	          extern    puts
+section .text
 
-	          section   .text
+	            global main
+
+
+
 main:
-	          mov       rdi, message
-	          call      puts
-	          ret
-message:
-	          db        "Hola, Holberton", 0
+
+
+
+	        mov     edx,len
+
+	        mov     ecx,msg
+
+	        mov     ebx,1
+
+	        mov     eax,4
+
+	        int     0x80
+
+
+
+	        mov     eax,1
+
+	        int     0x80
+
+
+
+	        section .data
+
+
+
+	        msg     db      'Hello, holberton!',0xa
+
+	        len     equ     $ - msg
+	
