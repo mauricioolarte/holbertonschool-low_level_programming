@@ -30,7 +30,7 @@ main:
 
 
 
-	        msg     db      'Hello, holberton!',0xa
+	        msg     db      'Hello, Holberton',0xa
 
 	        len     equ     $ - msg
 	
