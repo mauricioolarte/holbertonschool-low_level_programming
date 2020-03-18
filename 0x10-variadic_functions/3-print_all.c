@@ -3,10 +3,6 @@
 #include "variadic_functions.h"
 #include <stdlib.h>
 
-void _string();
-void _char();
-void _float();
-void _int();
 
 /**
  *print_all - this function print everithing.
@@ -36,7 +32,7 @@ void print_all(const char * const format, ...)
 			if (selec[j].p[0] == format[i])
 			{
 				printf("%s", separador);
-				selec[j].f(selector);
+				selec[j].fu(selector);
 				separador = ", ";
 			}
 			j++;
