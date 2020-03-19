@@ -2,12 +2,12 @@
 #include <stdlib.h>
 #include "lists.h"
 /**
- *print_list - print all the elements of a linked list.
+ *list_len - print all the elements of a linked list.
  *@h: is a linked list.
  *Return: size of linked list.
  */
 
-size_t print_list(const list_t *h)
+size_t list_len(const list_t *h)
 {
 	unsigned int countnod;
 
