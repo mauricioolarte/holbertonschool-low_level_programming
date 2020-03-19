@@ -10,6 +10,8 @@
 size_t print_list(const list_t *h)
 {
 	long unsigned int countnod;
+	if (h == 0)
+		return (0);
 	while (h != NULL)
 	{
 		if (h->str == NULL)
