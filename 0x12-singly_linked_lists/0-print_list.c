@@ -12,7 +12,7 @@ size_t print_list(const list_t *h)
 	long unsigned int countnod;
 	if (h == 0)
 		return (0);
-	while (h != NULL)
+	while (h->next != NULL)
 	{
 		if (h->str == NULL)
 			printf("[%u] (nil)\n", h->len);
@@ -21,5 +21,6 @@ size_t print_list(const list_t *h)
 		h = h->next;
 		countnod++;
 	}
+	printf("[%u] %s\n", h->len, h->str);
 	return(countnod);
 }
