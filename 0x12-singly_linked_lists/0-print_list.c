@@ -2,15 +2,16 @@
 #include <stdlib.h>
 #include "lists.h"
 /**
- *size_t print_list - print all the elements of a linked list.
+ *print_list - print all the elements of a linked list.
  *@h: is a linked list.
  *Return: size of linked list.
  */
 
 size_t print_list(const list_t *h)
 {
-	long unsigned int countnod;
-	if (h == 0)
+	unsigned int countnod;
+
+	if (h == NULL)
 		return (0);
 	while (h->next != NULL)
 	{
@@ -22,5 +23,5 @@ size_t print_list(const list_t *h)
 		countnod++;
 	}
 	printf("[%u] %s\n", h->len, h->str);
-	return(countnod);
+	return (++countnod);
 }
