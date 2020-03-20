@@ -3,10 +3,12 @@
 
 /**
  *printbeforeMain - print before main.
+ *Return: cero.
  */
-void printbeforeMain(void) __attribute__ ((constructor));
-void printbeforeMain(void)
+int printbeforeMain(void) __attribute__ ((constructor));
+int printbeforeMain(void)
 {
 	printf("You're beat! and yet, you must allow,\n");
 	printf("I bore  my house upon my back!\n");
+	return (0);
 }
