@@ -3,7 +3,7 @@
 #include "lists.h"
 
 /**
- *void free_list - free nodes.
+ *free_list - free nodes.
  *@head: is node.
  */
 
