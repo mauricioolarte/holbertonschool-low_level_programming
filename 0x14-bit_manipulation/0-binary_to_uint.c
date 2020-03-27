@@ -11,6 +11,8 @@ unsigned int binary_to_uint(const char *b)
 {
 	int count = 0, mul = 0, sum = 0, c;
 
+	if (b == NULL)
+		return (0);
 	while (b[count] != '\0')
 		count++;
 	c = count;
