@@ -44,10 +44,9 @@ unsigned int binary_to_uint2(char *b)
 
 int set_bit(unsigned long int *n, unsigned int index)
 {
-	unsigned long int c, nueindex, i, j, m;
+	unsigned long int c, nueindex, i, j;
 	char *p;
 
-	printf("%lu", *n);
 	c = *n;
 	while (*n)
 	{
