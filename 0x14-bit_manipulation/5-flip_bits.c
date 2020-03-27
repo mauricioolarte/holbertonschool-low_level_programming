@@ -47,14 +47,14 @@ unsigned int flip_bits(unsigned long int n, unsigned long int m)
 	unsigned long int c, nueindex, i, j;
 	char *p;
 
-	c = *n;
-	while (*n)
+	c = n;
+	while (n)
 	{
-		*n = (*n / 2);
+		n = (n / 2);
 		i++;
 	}
-	if (index > i)
-		i = index;
+	if (m > i)
+		i = m;
 	p = (char *)malloc(sizeof(char) * (i - 1));
 	if (p == NULL)
 	{
@@ -67,7 +67,7 @@ unsigned int flip_bits(unsigned long int n, unsigned long int m)
 		c = c / 2;
 	}
 
-	nueindex = i - (index + 1);
+	nueindex = i - (m + 1);
 	p[nueindex] = 1;
 	return (1);
 }
