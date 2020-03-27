@@ -10,27 +10,15 @@
 
 int get_bit(unsigned long int n, unsigned int index)
 {
-	unsigned int c, nueindex, i, j;
-	char *p;
 
-	c = n;
-	while (n > 0)
-	{
-		n = n / 2;
-		i++;
-	}
-	p = (char *)malloc(sizeof(char) * i);
-	if (p == NULL)
-	{
-		free(p);
+	long int tem, ret;
+
+        if (index > 32)
 		return (-1);
-	}
-	for (j = i; j > 0; j--)
-	{
-		p[j] = c % 2;
-		c = c / 2;
-	}
-
-	nueindex = i - index;
-	return (p[nueindex]);
+        tem = n & (1 << (index));
+        if (tem == (1 << (index)))
+            ret = 1;
+        else
+		ret = 0;
+	return (ret);
 }
