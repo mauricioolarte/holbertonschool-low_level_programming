@@ -27,6 +27,7 @@ int countSetBits(int n)
 unsigned int flip_bits(unsigned long int n, unsigned long int m)
 {
 
-
+	if (n == m || (n == 0 & m == 0))
+		return (0);
 	return (countSetBits(n ^ m));
 }
