@@ -13,12 +13,12 @@ int get_bit(unsigned long int n, unsigned int index)
 
 	long int tem, ret;
 
-        if (index > 32)
+	if (index > 32)
 		return (-1);
-        tem = n & (1 << (index));
-        if (tem == (1 << (index)))
-            ret = 1;
-        else
+	tem = n & (1 << (index));
+	if (tem == (1 << (index)))
+		ret = 1;
+	else
 		ret = 0;
 	return (ret);
 }
