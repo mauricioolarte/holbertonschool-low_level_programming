@@ -6,7 +6,7 @@
  *@n: is integer.
  *Return: count.
  */
-int countSetBits(int n)
+int countSetBits(unsigned long int n)
 {
 	int count = 0;
 
