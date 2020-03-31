@@ -3,6 +3,13 @@
 #include <fcntl.h>
 #include <unistd.h>
 
+/**
+ *read_textfile - print a tex.
+ *@filename: is file.
+ *@letters: is a number of characters to print.
+ *Return: printed characters.
+ */
+
 ssize_t read_textfile(const char *filename, size_t letters)
 {
 	int fd1, leidos, escritos;
@@ -11,7 +18,7 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	stringrec = (char *)(malloc(sizeof(char) * letters));
 	if (stringrec == NULL)
 	{
-		return(0);
+		return (0);
 	}
 
 	fd1 = open(filename, O_RDONLY);
