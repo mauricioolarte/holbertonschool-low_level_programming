@@ -13,9 +13,11 @@ int create_file(const char *filename, char *text_content)
 {
 	int vret, fd1;
 
-	if (filename == NULL)
+	if (filename[0] == 'N' && filename[1] == 'U' &&
+		filename[2] == 'L' && filename[3] == 'L')
+	{
 		return (-1);
-
+	}
 /* Creación y apertura del fichero */
 	fd1 = open(filename, O_CREAT | O_WRONLY | O_TRUNC, 0600);
 
@@ -23,7 +25,7 @@ int create_file(const char *filename, char *text_content)
 	if (fd1 < 0)
 	{
 		perror("Error al abrir fichero:");
-		exit(1);
+		exit(-1);
 	}
 
 /* Escritura de la cadena */
