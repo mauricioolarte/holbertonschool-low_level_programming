@@ -21,7 +21,7 @@ int append_text_to_file(const char *filename, char *text_content)
 	if (fd1 < 0)
 	{
 		perror("Error al abrir fichero:");
-		exit(1);
+		retur (-1);
 	}
 /* Escritura de la cadena */
 	vret = write(fd1, text_content, strlen(text_content));
