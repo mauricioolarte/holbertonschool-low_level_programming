@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include "holberton.h"
+#include <unistd.h>
 #include <fcntl.h>
 /**
  *create_file - create a file.
