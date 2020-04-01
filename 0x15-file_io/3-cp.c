@@ -5,8 +5,8 @@
 #include <fcntl.h>
 /**
  *create_file - create a file.
- *@filename: is a file.
- *@text_content: is string.
+ *@file_to: is a file.
+ *@file_from: is string.
  *Return: 0 is ok, -1 is wrong.
  */
 int create_file(const char *file_to, char *file_from)
@@ -36,7 +36,7 @@ int create_file(const char *file_to, char *file_from)
 	if (leidos < 0)
 	{
 		perror("Error: Can't read from file NAME_OF_THE_FILE");
-		exit (98);
+		exit(98);
 	}
 
 /* Escritura de la cadena */
@@ -44,7 +44,7 @@ int create_file(const char *file_to, char *file_from)
 	if (vret < 0)
 	{
 		perror("Error: Can't write to file_from");
-		exit (99);
+		exit(99);
 	}
 	close(fd1);
 	close(fd2);
