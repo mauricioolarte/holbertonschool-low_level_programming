@@ -23,6 +23,10 @@ int append_text_to_file(const char *filename, char *text_content)
 		perror("Error al abrir fichero:");
 		return (-1);
 	}
+	if (text_content == NULL && fd1 != -1)
+		return (1);
+	else
+		return (-1);
 /* Escritura de la cadena */
 	vret = write(fd1, text_content, strlen(text_content));
 	if (vret < 0)
