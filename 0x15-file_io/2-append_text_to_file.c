@@ -15,20 +15,16 @@ int append_text_to_file(const char *filename, char *text_content)
 
 	if (filename == NULL)
 		return (-1);
-	printf("1");
 /* Creación y apertura del fichero */
-	fd1 = open(filename, O_WRONLY | O_APPEND);
-	printf("hola");
+	fd1 = open(filename, O_WRONLY | O_APPEND, 0664);
 /* Comprobación de errores */
 	if (fd1 < 0)
 	{
 		perror("Error al abrir fichero:");
 		exit(1);
 	}
-	printf("estoyaquie");
 /* Escritura de la cadena */
 	vret = write(fd1, text_content, strlen(text_content));
-	printf("excribi");
 	if (vret < 0)
 	{
 		perror("Error al escriber fichero:");
