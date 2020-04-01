@@ -4,7 +4,7 @@
 #include <string.h>
 #include <unistd.h>
 /**
- *create_file - create a file.
+ *append_text_to_file - create a file.
  *@filename: is a file.
  *@text_content: is string.
  *Return: 0 is ok, -1 is wrong.
