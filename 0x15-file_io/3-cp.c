@@ -11,25 +11,19 @@
  */
 int create_file(const char *file_to, char *file_from)
 {
-	int vret, fd1, fd2, leidos;
+	int vret, fd1, fd2, leidos, cl1, cl2;
 	char stringrec[1024];
 
-/* Creación y apertura del fichero */
 	fd1 = open(file_to, O_CREAT | O_WRONLY | O_TRUNC, 0664);
-
-/* Comprobación de errores */
 	if (fd1 < 0)
 	{
-		dprintf(2, "Error: Can't write to %s", file_to);
+		dprintf(STDERR_FILENO, "Error: Can't write to %s", file_to);
 		exit(99);
 	}
-/* leyendo file_from*/
 	fd2 = open(file_from, O_RDONLY);
-
-/* Comprobación de errores */
 	if (fd2 < 0)
 	{
-		dprintf(2, "Error: Can't read from file %s", file_from);
+		dprintf(STDERR_FILENO, "Error: Can't read from file %s", file_from);
 		exit(98);
 	}
 	leidos = read(fd2, stringrec, 1024);
@@ -38,16 +32,24 @@ int create_file(const char *file_to, char *file_from)
 
 		exit(98);
 	}
-
-/* Escritura de la cadena */
 	vret = write(fd1, stringrec, leidos);
 	if (vret < 0)
 	{
-		dprintf(2, "Error: Can't write to %s", file_to);
+		dprintf(STDERR_FILENO, "Error: Can't write to %s", file_to);
 		exit(99);
 	}
-	close(fd1);
-	close(fd2);
+	cl1 = close(fd1);
+	if (cl1 < 0)
+	{
+		dprintf(STDERR_FILENO, "Error: Can't close fd %i", cl1);
+		exit(100);
+	}
+	cl2 = close(fd2);
+	if (cl1 < 0 || cl2 < 0)
+	{
+		dprintf(STDERR_FILENO, "Error: Can't close fd %i", cl2);
+		exit(100);
+	}
 	return (1);
 }
 
@@ -65,12 +67,10 @@ int main(int ac, char **av)
 
 	if (ac != 3)
 	{
-		dprintf(2, "Usage: %s %s\n", av[1], av[2]);
+		dprintf(STDERR_FILENO, "Usage: %s %s\n", av[1], av[2]);
 		exit(97);
 	}
 
-	if (av[0][2] != 'c' || av[0][3] != 'p' || av[0][4] != '\0')
-		exit(0);
 	create_file(av[2], av[1]);
 
 	return (0);
