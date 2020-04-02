@@ -13,7 +13,7 @@ int create_file(const char *filename, char *text_content)
 {
 	int vret, fd1;
 
-	// si text_content is null create a void file.
+	/* si text_content is null create a void file.*/
 	if (text_content == NULL)
 		text_content = "";
 	fd1 = open(filename, O_RDWR | O_CREAT | O_TRUNC, 0600);
