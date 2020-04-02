@@ -22,9 +22,9 @@ int append_text_to_file(const char *filename, char *text_content)
 	{
 		return (-1);
 	}
-	vwrite = strlen(text_content);
-	if (vwrite == 0)
+	if (text_content == NULL)
 		return (1);
+	vwrite = strlen(text_content);
 	vret = write(fd1, text_content, vwrite);
 	if (vret < 0)
 	{
