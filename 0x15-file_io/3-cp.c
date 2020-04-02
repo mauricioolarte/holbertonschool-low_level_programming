@@ -20,7 +20,7 @@ int create_file(const char *file_to, char *file_from)
 /* Comprobación de errores */
 	if (fd1 < 0)
 	{
-		perror("Error: Can\'t write to file_to\n");
+		dprintf(2, "Error: Can't write to %s", file_to);
 		exit(99);
 	}
 /* leyendo file_from*/
@@ -29,13 +29,13 @@ int create_file(const char *file_to, char *file_from)
 /* Comprobación de errores */
 	if (fd2 < 0)
 	{
-		perror("Error: Can\'t read from file file_from\n");
-		exit(99);
+		dprintf(2, "Error: Can't read from file %s", file_from);
+		exit(98);
 	}
 	leidos = read(fd2, stringrec, 1024);
 	if (leidos < 0)
 	{
-		perror("Error: Can't read from file NAME_OF_THE_FILE");
+
 		exit(98);
 	}
 
@@ -43,7 +43,7 @@ int create_file(const char *file_to, char *file_from)
 	vret = write(fd1, stringrec, leidos);
 	if (vret < 0)
 	{
-		perror("Error: Can't write to file_from");
+		dprintf(2, "Error: Can't write to %s", file_to);
 		exit(99);
 	}
 	close(fd1);
