@@ -52,6 +52,8 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 	unsigned int countnodes;
 
 	countnodes = dlistint_len(*h);
+	if (*h == NULL && idx > 0)
+		return (NULL);
 	if (*h == NULL)
 	{
 		add_dnodeint(h, n);
