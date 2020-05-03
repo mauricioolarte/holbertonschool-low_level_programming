@@ -33,13 +33,19 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 	dlistint_t *new;
 	dlistint_t *nodeidx;
 
+	if (*h == NULL)
+	{
+		add_dnodeint(h, n);
+		return (*h);
+	}
 	nodeidx = get_dnodeint_at_index(*h, idx);
-	if (nodeidx == NULL)
-		return (NULL);
+
 	new = malloc(sizeof(dlistint_t));
 	if (new == NULL)
 		return (NULL);
 	new->n = n;
+	if (nodeidx == NULL)
+		add_dnodeint_end(h, n);
 	new->prev = nodeidx->prev;
 	nodeidx->prev = new;
 	new->next = nodeidx;
