@@ -34,12 +34,6 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 	dlistint_t *nodeidx;
 
 	nodeidx = get_dnodeint_at_index(*h, idx);
-	if (*h == NULL)
-	{
-		printf("hola");
-		return(NULL);
-	}
-
 	if (nodeidx == NULL)
 		return (NULL);
 	new = malloc(sizeof(dlistint_t));
