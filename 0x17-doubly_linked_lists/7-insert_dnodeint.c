@@ -47,7 +47,7 @@ size_t dlistint_len(const dlistint_t *h)
 */
 dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 {
-	dlistint_t *new;
+	dlistint_t *new, *prueba;
 	dlistint_t *nodeidx;
 	unsigned int countnodes;
 
@@ -56,13 +56,13 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 		return (NULL);
 	if (*h == NULL)
 	{
-		add_dnodeint(h, n);
-		return (*h);
+		prueba = add_dnodeint(h, n);
+		return (prueba);
 	}
 	if (idx == countnodes)
 	{
-		add_dnodeint_end(h, n);
-		return (*h);
+		prueba = add_dnodeint_end(h, n);
+		return (prueba);
 	}
 	nodeidx = get_dnodeint_at_index(*h, idx);
 	if (nodeidx == NULL)
