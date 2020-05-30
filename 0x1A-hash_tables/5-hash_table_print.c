@@ -4,9 +4,8 @@
 #include "hash_tables.h"
 #define ACTIVE 1
 /**
- *hash_table_get - this is for include a value in hash table
+ *hash_table_print - this is for include a value in hash table
  *@ht: is address hast table
- *@key: key of data
  *Return: 0 is fail or 1 is succes
  */
 
