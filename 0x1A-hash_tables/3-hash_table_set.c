@@ -3,6 +3,28 @@
 #include <string.h>
 #include "hash_tables.h"
 /**
+ *_strcpy - copy string.
+ *@dest: destiny copy.
+ *@src: string to copy:
+ *Return: a destiny.
+ */
+
+char *_strcpy(char *dest, char *src)
+{
+	int i = 0;
+
+	dest = malloc((strlen(src) + 1) * sizeof(char));
+	while (src[i])
+	{
+		dest[i] = src[i];
+		i++;
+	}
+	dest[i] = '\0';
+	return (dest);
+}
+
+
+/**
  *hash_table_set - this is for include a value in hash table
  *@ht: is address hast table
  *@key: key of data
@@ -17,12 +39,8 @@ int hash_table_set(hash_table_t *ht, char *key,  char *value)
 	char *key_1 = NULL;
 	char *value_1 = NULL;
 
-	key_1 = malloc(sizeof(char) * strlen(key));
-	value_1 = malloc(sizeof(char) * strlen(value));
-	if (key_1 == NULL || value_1 == NULL)
-		return (0);
-	strcpy(key_1, key);
-	strcpy(value_1, value);
+	key_1 = _strcpy(key_1, key);
+	value_1 = _strcpy(value_1, value);
 	if (key == '\0')
 		return (0);
 	if (key != NULL && ht != NULL)
@@ -48,7 +66,6 @@ int hash_table_set(hash_table_t *ht, char *key,  char *value)
 			ht->array[index] = new_node;
 			new_node = temp;
 			ht->array[index]->next = new_node;
-/*			free(temp);*/
 		}
 	}
 	return (1);
