@@ -14,6 +14,8 @@ char *_strcpy(char *dest, char *src)
 	int i = 0;
 
 	dest = malloc((strlen(src) + 1) * sizeof(char));
+	if (dest == NULL)
+		return (0);
 	while (src[i])
 	{
 		dest[i] = src[i];
@@ -62,6 +64,8 @@ int hash_table_set(hash_table_t *ht, char *key,  char *value)
 		else
 		{
 			temp = malloc(sizeof(hash_node_t));
+			if (temp == NULL)
+				return (0);
 			temp = ht->array[index];
 			ht->array[index] = new_node;
 			new_node = temp;
