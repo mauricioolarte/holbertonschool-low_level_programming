@@ -2,7 +2,7 @@ CC = gcc
 SRC = $(wildcard *.c)
 OBJ = $(SRC:%.c=%.o)
 NAME = holberton
-all: main.o holberton.o holberton
+all: ${OBJ} holberton
 main.o: main.c
 	${CC} -c -o main.o main.c
 holberton.o: holberton.c
