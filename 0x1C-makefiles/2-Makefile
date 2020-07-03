@@ -1,11 +1,11 @@
-
 CC = gcc
 SRC = main.c holberton.c
-OBJ:$(wilcard *.o)
+OBJ = main.o holberton.o
 NAME = holberton
-all: holberton
-
-holberton: ${SRC}
-	${CC} -c -o main.c main.o
-	${CC} -c -o holberton.c holberton.o
-	${CC} ${OBJ} -O ${NAME}
+all: main.o holberton.o holberton
+main.o: main.c
+	${CC} -c -o main.o main.c
+holberton.o: holberton.c
+	${CC} -c -o holberton.o holberton.c
+holberton: holberton.o main.o
+	${CC} ${OBJ} -o ${NAME}
