@@ -1,14 +1,18 @@
-CC=gcc  #compiler
-NAME=holberton #target file name
-SRC= $(wildcard *.c)
+CC=gcc
+NAME=holberton
+SRC= main.c holberton.c
 OBJ=$(SRC:%.c=%.o)
 
 .PHONY: all clean oclean fclean re
 all:   ${OBJ}
 	$(CC) ${OBJ} -o $(NAME)
+
 clean:
 	rm -f *~ *.swp
 oclean:
 	rm -f *.o
 fclean:
 	rm -f *.o *~ holberton
+re: ${OBJ}
+	rm -f *.o
+	$(CC) ${OBJ} -o $(NAME)
