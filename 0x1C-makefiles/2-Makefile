@@ -1,6 +1,6 @@
 CC=gcc  #compiler
 NAME=holberton #target file name
-SRC= main.c holberton.c m.h
-OBJ=$(SRC:%.c=%.o)
-all:   ${OBJ}
-	$(CC) ${OBJ} -o $(NAME)
+SRC := $(wildcard *.c)
+OBJ := $(patsubst %.c,%.o, $(SRC))
+all:   $(OBJ)
+	$(CC) $(OBJ) -o $(NAME)
