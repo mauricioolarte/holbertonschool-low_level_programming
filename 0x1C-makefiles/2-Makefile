@@ -1,9 +1,6 @@
-CC = gcc
-SRC = $(wildcard *.c)
-OBJ = $(SRC:%.c=%.o)
-NAME = holberton
-all: ${SRC} ${OBJ} holberton
-holberton: ${SRC}
-	${CC} -c -o main.o main.c
-	${CC} -c -o holberton.o holberton.c
-	${CC} ${OBJ} -o ${NAME}
+CC=gcc  #compiler
+NAME=holberton #target file name
+SRC=$(wildcard *.c)
+OBJ=$(SRC:%.c=%.o)
+all:   ${OBJ}
+	$(CC) ${SRC} -o $(NAME)
