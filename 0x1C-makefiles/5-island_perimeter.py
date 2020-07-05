@@ -9,12 +9,12 @@ def island_perimeter(grid):
         for fil in range (len(grid)):
             for col in range (len(grid[0])):
                 if grid[fil][col] == 1:
-                    if grid[fil - 1][col] == 0:
+                    if  (fil - 1) < 0 or grid[fil - 1][col] == 0:
                         perimetre += 1
-                    if grid[fil][col - 1] == 0:
+                    if (col - 1) < 0 or grid[fil][col - 1] == 0:
                         perimetre += 1
-                    if grid[fil + 1][col] == 0:
+                    if (fil + 1) > (len(grid) - 1) or grid[fil + 1][col] == 0:
                         perimetre += 1
-                    if grid[fil][col + 1] == 0:
+                    if (col + 1) > (len(grid[0]) - 1) or grid[fil][col + 1] == 0:
                         perimetre += 1
         return perimetre
