@@ -4,11 +4,11 @@
 
 
 /**
- *jump_search - function that searches for a value in a sorted array of integers.
+ *jump_search - function that searches for a value in a sorted array of integer
  *@array: s a pointer to the first element of the array to search in
  *@size: is the number of elment in the array
  *@value: is the value to search for
- *return: index of search or -1 if not found value.
+ *Return: index of search or -1 if not found value.
  */
 
 int jump_search(int *array, size_t size, int value)
@@ -16,6 +16,8 @@ int jump_search(int *array, size_t size, int value)
 	int jump = sqrt(size);
 	unsigned int r_idx = 0, l_idx = jump;
 
+	if (array == NULL)
+		return (-1);
 	while (array[l_idx] < value)
 	{
 		printf("Value checked array[%i] = [%i]\n", r_idx, array[r_idx]);
@@ -42,7 +44,7 @@ int jump_search(int *array, size_t size, int value)
 	}
 
 	if (array[r_idx] == value)
-		return r_idx;
+		return (r_idx);
 	return (-1);
 
 
