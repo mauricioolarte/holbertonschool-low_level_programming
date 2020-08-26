@@ -3,12 +3,14 @@
 
 /**
  *print_array - print intevale of array.
+ *@array: pointer to array
  *@l: left size of interval
  *@r: right size of interval
  */
 void print_array(int *array, int l, int r)
 {
 	int i = 0;
+
 	printf("Searching in array: ");
 	for (i = l; i <= r; i++)
 	{
@@ -21,7 +23,7 @@ void print_array(int *array, int l, int r)
 }
 
 /**
-*linear_search - function that searches for a value in an array of integers
+*binary_search - function that searches for a value in an array of integers
 *@array:  is a pointer to the first element of the array to search in
 *@size: is the number of elements in array
 *@value: is the value to search for
@@ -45,7 +47,7 @@ int binary_search(int *array, size_t size, int value)
 		{
 			l_index = m + 1;
 		}
-		else if (array[m] > value )
+		else if (array[m] > value)
 		{
 			r_index = m - 1;
 		}
