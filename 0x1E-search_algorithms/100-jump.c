@@ -43,8 +43,8 @@ int jump_search(int *array, size_t size, int value)
 		}
 	}
 
-	if (array[r_idx] == value)
-		return (r_idx);
+	if (array[r_idx - 1] == value)
+		return (r_idx - 1);
 	return (-1);
 
 
