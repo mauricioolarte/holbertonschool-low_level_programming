@@ -19,7 +19,7 @@ int jump_search(int *array, size_t size, int value)
 	if (array == NULL)
 		return (-1);
 	printf("Value checked array[%i] = [%i]\n", r_idx, array[r_idx]);
-	while (array[l_idx] < value)
+	while (l_idx < (unsigned int)size && array[l_idx] < value)
 	{
 
 		r_idx = l_idx;
